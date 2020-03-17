@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-function Todos() {
+class Todos extends Component {
 
-  return (
+    // Render
+    render() {
 
-    <div>
+        console.log(this.props.todos)
 
-      <h1>Todos</h1>
+        return (
 
-    </div>
+            <div>
+        
+                {/* Title */}
+                <h1>Todos</h1>
+        
+            </div>
+        
+        );
 
-  );
+    }
 
 }
 
