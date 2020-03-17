@@ -45,6 +45,13 @@ class TodoItem extends Component {
 
     }
 
+    // Method for check boxes
+    markComplete = (e) => {
+
+        console.log(this.props)
+
+    }
+
     // Render
     render() {
 
@@ -52,7 +59,15 @@ class TodoItem extends Component {
 
             <div style={ this.getStyle() }>
 
-                <h3>{ this.props.todo.title }</h3>
+                <h3>
+
+                    {/* Checkbox */}
+                    <input type="checkbox" onChange={this.props.markComplete.bind(this)}/> { ' ' }
+
+                    {/* Title */}
+                    { this.props.todo.title }
+                    
+                </h3>
 
             </div>
 

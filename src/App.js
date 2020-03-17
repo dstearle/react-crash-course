@@ -29,6 +29,13 @@ class App extends Component {
 
 	}
 
+	// Checks to see if individual todo item is checked
+	markComplete = () => {
+
+		console.log('test props 2')
+
+	}
+
 	// Render
 	render(){
 
@@ -42,7 +49,7 @@ class App extends Component {
 				<h1>App</h1>
 	
 				{/* Todos Component */}
-				<Todos todos={this.state.todos}/>
+				<Todos todos={this.state.todos} markComplete={this.markComplete}/>
 	
 			</div>
 	
