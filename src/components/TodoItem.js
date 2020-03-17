@@ -55,6 +55,9 @@ class TodoItem extends Component {
     // Render
     render() {
 
+        // Destructuring for todo props
+        const {id, title} = this.props.todo;
+
         return(
 
             <div style={ this.getStyle() }>
@@ -62,10 +65,10 @@ class TodoItem extends Component {
                 <h3>
 
                     {/* Checkbox */}
-                    <input type="checkbox" onChange={this.props.markComplete.bind(this)}/> { ' ' }
+                    <input type="checkbox" onChange={this.props.markComplete.bind(this, id)}/> { ' ' }
 
                     {/* Title */}
-                    { this.props.todo.title }
+                    { title }
                     
                 </h3>
 

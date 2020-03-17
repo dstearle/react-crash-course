@@ -30,9 +30,9 @@ class App extends Component {
 	}
 
 	// Checks to see if individual todo item is checked
-	markComplete = () => {
+	markComplete = (id) => {
 
-		console.log('test props 2')
+		console.log(id)
 
 	}
 
