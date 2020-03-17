@@ -8,6 +8,7 @@ class App extends Component {
 	state = {
 
 		todos: [
+
 			{
 				id:1,
 				title: 'Take out trash',
@@ -16,14 +17,16 @@ class App extends Component {
 			{
 				id:2,
 				title: 'Dinner with waify',
-				completed: false
+				completed: true
 			},
 			{
 				id:3,
 				title: 'Cuddle behbeh',
 				completed: false
 			},
+
 		]
+
 	}
 
 	// Render
