@@ -9,7 +9,7 @@ class TodoItem extends Component {
 
             <div>
 
-                <h1>test</h1>
+                <h1>{ this.props.todo.title }</h1>
 
             </div>
 
