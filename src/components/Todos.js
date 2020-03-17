@@ -5,18 +5,9 @@ class Todos extends Component {
     // Render
     render() {
 
-        console.log(this.props.todos)
+        // console.log(this.props.todos)
 
-        return (
-
-            <div>
-        
-                {/* Title */}
-                <h1>Todos</h1>
-        
-            </div>
-        
-        );
+        return this.props.todos.map((todo) => <h3>{ todo.title }</h3>);
 
     }
 
