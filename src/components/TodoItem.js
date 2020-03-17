@@ -4,28 +4,42 @@ import PropTypes from 'prop-types';
 // class
 class TodoItem extends Component {
 
-    // 
+    // Determines if item should be marked off or not
+    // getStyle = () => {
+
+    //     // If the todo item has been completed mark it off
+    //     if(this.props.todo.completed) {
+
+    //         return {
+
+    //             textDecoration: 'line-through'
+
+    //         }
+
+    //     }
+
+    //     // Else leave unmarked
+    //     else {
+
+    //         return {
+
+    //             textDecoration: 'none'
+
+    //         }
+
+    //     }
+
+    // }
+
+    // Same as above example but shorter
     getStyle = () => {
 
-        // If the todo item has been completed mark it off
-        if(this.props.todo.completed) {
+        return {
 
-            return {
-
-                textDecoration: 'line-through'
-
-            }
-
-        }
-
-        // Else leave unmarked
-        else {
-
-            return {
-
-                textDecoration: 'none'
-
-            }
+            background: '#f4f4f4',
+            padding: '10px',
+            borderBottom: '1px #ccc dotted',
+            textDecoration: this.props.todo.completed ? 'line-through' : 'none'
 
         }
 
@@ -55,7 +69,7 @@ TodoItem.propTypes = {
     
 }
 
-// Styling
+// Styling Example
 // const itemStyle = {
 
 //     backgroundColor: '#f4f4f4'
