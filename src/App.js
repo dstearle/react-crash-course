@@ -63,7 +63,11 @@ class App extends Component {
 				<h1>App</h1>
 	
 				{/* Todos Component */}
-				<Todos todos={this.state.todos} markComplete={this.markComplete}/>
+				<Todos 
+					todos={this.state.todos} 
+					markComplete={this.markComplete}
+					delTodo={this.delTodo}
+				/>
 	
 			</div>
 	
