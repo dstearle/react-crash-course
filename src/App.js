@@ -32,7 +32,21 @@ class App extends Component {
 	// Checks to see if individual todo item is checked
 	markComplete = (id) => {
 
-		console.log(id)
+		// Maps the state for todos
+		this.setState({ todos: this.state.todos.map(todo => {
+
+				// Toggles boolean for completed
+				if(todo.id === id) {
+
+					todo.completed = !todo.completed
+
+				}
+
+				return todo;
+
+			})
+
+		})
 
 	}
 
