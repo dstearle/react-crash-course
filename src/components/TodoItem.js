@@ -69,6 +69,9 @@ class TodoItem extends Component {
 
                     {/* Title */}
                     { title }
+
+                    {/* Delete Button */}
+                    <button style={btnStyle}>x</button>
                     
                 </h3>
 
@@ -85,6 +88,19 @@ TodoItem.propTypes = {
 
     todo: PropTypes.object.isRequired
     
+}
+
+// Styling for delete button
+const btnStyle = {
+
+    background: '#ff0000',
+    color: '#fff',
+    border: 'none',
+    padding: '5px 10px',
+    borderRadius: '50%',
+    cursor: 'pointer',
+    float: 'right'
+
 }
 
 // Styling Example
