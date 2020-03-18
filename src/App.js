@@ -50,6 +50,13 @@ class App extends Component {
 
 	}
 
+	// Delete todo
+	delTodo = (id) => {
+
+		console.log(id)
+
+	}
+
 	// Render
 	render(){
 
