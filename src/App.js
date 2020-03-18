@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Header from './components/layout/Header.js'
 import Todos from './components/Todos.js';
 import './App.css';
 
@@ -56,8 +57,9 @@ class App extends Component {
 		// console.log(id)
 		this.setState({
 
+			// Filters the array of todo items
 			todos: [...this.state.todos.filter(todo => todo.id !== id)]
-			
+
 		});
 
 	}
@@ -71,8 +73,8 @@ class App extends Component {
 
 			<div className="App">
 	
-				{/* Title */}
-				<h1>App</h1>
+				{/* Header */}
+				<Header />
 	
 				{/* Todos Component */}
 				<Todos 
