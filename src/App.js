@@ -74,18 +74,22 @@ class App extends Component {
 
 			<div className="App">
 	
-				{/* Header */}
-				<Header />
+				<div className="container">
 
-				{/* Add Todo */}
-				<AddTodo />
-	
-				{/* Todos Component */}
-				<Todos 
-					todos={this.state.todos} 
-					markComplete={this.markComplete}
-					delTodo={this.delTodo}
-				/>
+					{/* Header */}
+					<Header />
+
+					{/* Add Todo */}
+					<AddTodo />
+
+					{/* Todos Component */}
+					<Todos 
+						todos={this.state.todos} 
+						markComplete={this.markComplete}
+						delTodo={this.delTodo}
+					/>
+
+				</div>
 	
 			</div>
 	
