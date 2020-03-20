@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Header from './components/layout/Header.js'
-import Todos from './components/Todos.js';
-import AddTodo from './components/AddTodo.js';
+import Todos from './components/todoList/Todos.js';
+import AddTodo from './components/todoList/AddTodo.js';
 import './App.css';
 
 class App extends Component {
