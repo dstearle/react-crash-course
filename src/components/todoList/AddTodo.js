@@ -3,6 +3,16 @@ import React, { Component } from 'react';
 // Class
 export class AddTodo extends Component {
 
+    // State
+    state= {
+
+        title: ''
+
+    }
+
+    // Method for updating value of state
+    onChange = (e) => this.setState({ [e.target.name]: e.target.value });
+
     render() {
 
         return (
@@ -16,6 +26,8 @@ export class AddTodo extends Component {
                     name="title"
                     style={{ flex: '10', padding: '5px' }} 
                     placeholder="Add Todo..."
+                    value={this.state.title}
+                    onChange={this.onChange}
                 />
 
                 {/* Submit Button */}
