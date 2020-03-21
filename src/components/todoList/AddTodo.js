@@ -10,6 +10,14 @@ export class AddTodo extends Component {
 
     }
 
+    // 
+    onSubmit = (e) => {
+
+        e.preventDefault();
+        this.props.addTodo(this.state.title);
+        this.setState({ title: '' });
+    }
+
     // Method for updating value of state
     onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
@@ -18,7 +26,7 @@ export class AddTodo extends Component {
         return (
 
             // Form
-            <form style={{ display: 'flex' }}>
+            <form onSubmit={this.onSubmit} style={{ display: 'flex' }}>
 
                 {/* Add Todo Input */}
                 <input 

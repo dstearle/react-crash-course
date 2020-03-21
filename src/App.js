@@ -66,6 +66,13 @@ class App extends Component {
 
 	}
 
+	// Add todo
+	addTodo = (title) => {
+
+		console.log(title)
+		
+	}
+
 	// Render
 	render(){
 
@@ -81,7 +88,7 @@ class App extends Component {
 					<Header />
 
 					{/* Add Todo */}
-					<AddTodo />
+					<AddTodo addTodo={this.addTodo}/>
 
 					{/* Todos Component */}
 					<Todos 
