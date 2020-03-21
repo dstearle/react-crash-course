@@ -2,7 +2,10 @@ import React, {Component} from 'react';
 import Header from './components/layout/Header.js'
 import Todos from './components/todoList/Todos.js';
 import AddTodo from './components/todoList/AddTodo.js';
+import About from './components/pages/About.js';
+
 import { v4 as uuidv4 } from 'uuid';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import './App.css';
 
@@ -90,26 +93,42 @@ class App extends Component {
 
 		return (
 
-			<div className="App">
-	
-				<div className="container">
+			<Router>
 
-					{/* Header */}
-					<Header />
+				<div className="App">
+					
+					<div className="container">
 
-					{/* Add Todo */}
-					<AddTodo addTodo={this.addTodo}/>
+						{/* Header */}
+						<Header />
 
-					{/* Todos Component */}
-					<Todos 
-						todos={this.state.todos} 
-						markComplete={this.markComplete}
-						delTodo={this.delTodo}
-					/>
+						{/* Route for Index Page */}
+						<Route exact path="/" render={props => (
+
+							<React.Fragment>
+
+								{/* Add Todo */}
+								<AddTodo addTodo={this.addTodo}/>
+
+								{/* Todos Component */}
+								<Todos 
+									todos={this.state.todos} 
+									markComplete={this.markComplete}
+									delTodo={this.delTodo}
+								/>
+
+							</React.Fragment>
+
+						)} />
+
+						{/* Route for About Page  */}
+						<Route path="/about" component={About} />
+
+					</div>
 
 				</div>
-	
-			</div>
+
+			</Router>
 	
 		);
 
