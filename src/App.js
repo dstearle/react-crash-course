@@ -49,6 +49,9 @@ class App extends Component {
 		// Retrieves an array of 10 todos from url and displays in console
 		// axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10').then(res=> console.log(res.data))
 
+		// Retrieves an array of 10 todos from url and displays in console
+		axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10').then(res=> this.setState({ todos: res.data }))
+
 	}
 
 	// Checks to see if individual todo item is checked
