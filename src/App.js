@@ -43,8 +43,11 @@ class App extends Component {
 	// Lifecycle method
 	componentDidMount() {
 
-		// Retrieves an array of todos from url and displays in console
-		axios.get('https://jsonplaceholder.typicode.com/todos').then(res=> console.log(res.data))
+		// Retrieves an array of 200 todos from url and displays in console
+		// axios.get('https://jsonplaceholder.typicode.com/todos').then(res=> console.log(res.data))
+
+		// Retrieves an array of 10 todos from url and displays in console
+		// axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10').then(res=> console.log(res.data))
 
 	}
 
