@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import Header from './components/layout/Header.js'
 import Todos from './components/todoList/Todos.js';
 import AddTodo from './components/todoList/AddTodo.js';
+import { v4 as uuidv4 } from 'uuid';
 
 import './App.css';
 
@@ -13,17 +14,17 @@ class App extends Component {
 		todos: [
 
 			{
-				id:1,
+				id: uuidv4(),
 				title: 'Take out trash',
 				completed: false
 			},
 			{
-				id:2,
+				id: uuidv4(),
 				title: 'Dinner with waify',
 				completed: true
 			},
 			{
-				id:3,
+				id: uuidv4(),
 				title: 'Cuddle behbeh',
 				completed: false
 			},
@@ -71,12 +72,12 @@ class App extends Component {
 
 		const newTodo = {
 
-			id: 4,
+			id: uuidv4(),
 			title: title,
 			completed: false
 
 		}
-		
+
 		// console.log(title)
 		this.setState({ todos: [...this.state.todos, newTodo] })
 
