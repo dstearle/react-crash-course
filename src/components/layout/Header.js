@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
 
@@ -6,7 +7,13 @@ function Header() {
 
         <header style={headerStyle}>
 
+            {/* Title */}
             <h1>Todo List</h1>
+
+            {/* Page Links */}
+            <Link to="/">Home</Link> |
+
+            <Link to="/about">About</Link>
 
         </header>
 
