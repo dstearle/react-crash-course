@@ -4,7 +4,7 @@ import Todos from './components/todoList/Todos.js';
 import AddTodo from './components/todoList/AddTodo.js';
 import About from './components/pages/About.js';
 
-import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid'; // Not needed for axios examples
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import axios from 'axios';
 
@@ -91,16 +91,33 @@ class App extends Component {
 	// Add todo
 	addTodo = (title) => {
 
-		const newTodo = {
+		// Hardcode example
+		// const newTodo = {
 
-			id: uuidv4(),
-			title: title,
-			completed: false
+		// 	id: uuidv4(),
+		// 	title: title,
+		// 	completed: false
 
-		}
+		// }
 
 		// console.log(title)
-		this.setState({ todos: [...this.state.todos, newTodo] })
+		// this.setState({ todos: [...this.state.todos, newTodo] });
+
+
+
+		// Axios post example
+		axios.post(
+			
+			// Where we are posting to
+			'https://jsonplaceholder.typicode.com/todos', 
+			
+			// The object we are posting
+			{ 
+				title: title,
+				completed: false
+			}
+			
+		).then(res => this.setState({ todos: [...this.state.todos, res.data] }));
 
 	}
 
