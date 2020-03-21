@@ -6,6 +6,7 @@ import About from './components/pages/About.js';
 
 import { v4 as uuidv4 } from 'uuid';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
+import axios from 'axios';
 
 import './App.css';
 
@@ -14,25 +15,36 @@ class App extends Component {
 	// State
 	state = {
 
-		todos: [
+		// Hard coded example of 'todos' state
+		// todos: [
 
-			{
-				id: uuidv4(),
-				title: 'Take out trash',
-				completed: false
-			},
-			{
-				id: uuidv4(),
-				title: 'Dinner with waify',
-				completed: true
-			},
-			{
-				id: uuidv4(),
-				title: 'Cuddle behbeh',
-				completed: false
-			},
+		// 	{
+		// 		id: uuidv4(),
+		// 		title: 'Take out trash',
+		// 		completed: false
+		// 	},
+		// 	{
+		// 		id: uuidv4(),
+		// 		title: 'Dinner with waify',
+		// 		completed: true
+		// 	},
+		// 	{
+		// 		id: uuidv4(),
+		// 		title: 'Cuddle behbeh',
+		// 		completed: false
+		// 	},
 
-		]
+		// ]
+
+		todos: []
+
+	}
+
+	// Lifecycle method
+	componentDidMount() {
+
+		// Retrieves an array of todos from url and displays in console
+		axios.get('https://jsonplaceholder.typicode.com/todos').then(res=> console.log(res.data))
 
 	}
 
