@@ -78,13 +78,25 @@ class App extends Component {
 	// Delete todo
 	delTodo = (id) => {
 
+		// Hardcode example
 		// console.log(id)
-		this.setState({
+		// this.setState({
+
+		// 	// Filters the array of todo items
+		// 	todos: [...this.state.todos.filter(todo => todo.id !== id)]
+
+		// });
+
+		// Axios delete example
+		axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+		.then(
+			
+			res => 
 
 			// Filters the array of todo items
-			todos: [...this.state.todos.filter(todo => todo.id !== id)]
-
-		});
+			this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] })
+			
+		);
 
 	}
 
